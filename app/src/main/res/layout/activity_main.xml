@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/ivb"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.github.florent37.diagonallayout.DiagonalLayout
+        android:id="@+id/ivlp"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        app:diagonal_angle="45"
+        app:diagonal_direction="left"
+        app:diagonal_position="bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/ivl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </com.github.florent37.diagonallayout.DiagonalLayout>
+
+    <com.github.florent37.diagonallayout.DiagonalLayout
+        android:id="@+id/ivrp"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        app:diagonal_angle="45"
+        app:diagonal_direction="right"
+        app:diagonal_position="bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/ivr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </com.github.florent37.diagonallayout.DiagonalLayout>
+
+    <View
+        android:id="@+id/ivt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.florent37.diagonallayout.DiagonalLayout
+        android:id="@+id/ivl2p"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/center_vert_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:diagonal_angle="45"
+        app:diagonal_position="top"
+        app:diagonal_direction="left">
+
+        <View
+            android:id="@+id/ivl2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="118dp" />
+
+    </com.github.florent37.diagonallayout.DiagonalLayout>
+
+    <com.github.florent37.diagonallayout.DiagonalLayout
+        android:id="@+id/ivr2p"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/center_vert_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:diagonal_angle="45"
+        app:diagonal_position="top"
+        app:diagonal_direction="right">
+
+        <View
+            android:id="@+id/ivr2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </com.github.florent37.diagonallayout.DiagonalLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/center_vert_guideline"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <SeekBar
+        android:id="@+id/sb"
+        style="@style/Base.Widget.AppCompat.SeekBar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:max="500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
